@@ -7,7 +7,7 @@ export class UserController {
             const user = createUser(data)
             res.status(200).send(await user)
         } catch (error) {
-            console.log(`Erro ao criar usuario ${error}`);
+            console.log(`Erro ao criar usuário ${error}`);
         }
     }
 
@@ -16,7 +16,7 @@ export class UserController {
             const users = getUsers()
             res.status(200).send(await users)
         } catch (error) {
-            console.log(error);
+            console.log(`Erro ao recuperar usuários ${error}`);
         }
     }
 
@@ -27,7 +27,7 @@ export class UserController {
             const user = getUserById(id)
                 res.status(200).send(await user)
         } catch (error) {
-            console.log(error);
+            console.log(`Erro ao recuperar usuário ${error}`);
         }
     }
 
